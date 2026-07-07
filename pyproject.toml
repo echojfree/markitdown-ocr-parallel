@@ -55,6 +55,9 @@ Source = "https://github.com/echojfree/markitdown-ocr-parallel"
 [tool.hatch.version]
 path = "src/markitdown_ocr/__about__.py"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/markitdown_ocr"]
+
 [project.entry-points."markitdown.plugin"]
 ocr_parallel = "markitdown_ocr"
 
