@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "markitdown-ocr"
+dynamic = ["version"]
+description = "Parallel LLM Vision OCR plugin for MarkItDown — extracts text from images in PDF, DOCX, PPTX, and XLSX files with 3x speedup via ThreadPoolExecutor batching."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["markitdown", "ocr", "pdf", "docx", "xlsx", "pptx", "llm", "vision", "parallel"]
+authors = [
+  { name = "echojfree", email = "jayecho88@outlook.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Text Processing :: Markup",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "markitdown>=0.1.0",
+  "pdfminer.six>=20251230",
+  "pdfplumber>=0.11.9",
+  "PyMuPDF>=1.24.0",
+  "mammoth~=1.11.0",
+  "python-docx",
+  "python-pptx",
+  "pandas",
+  "openpyxl",
+  "Pillow>=9.0.0",
+]
+
+[project.optional-dependencies]
+llm = [
+  "openai>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/echojfree/markitdown-ocr"
+Documentation = "https://github.com/echojfree/markitdown-ocr#readme"
+Issues = "https://github.com/echojfree/markitdown-ocr/issues"
+Source = "https://github.com/echojfree/markitdown-ocr"
+
+[tool.hatch.version]
+path = "src/markitdown_ocr/__about__.py"
+
+[project.entry-points."markitdown.plugin"]
+ocr = "markitdown_ocr"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
