@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "markitdown-ocr"
+name = "markitdown-ocr-parallel"
 dynamic = ["version"]
 description = "Parallel LLM Vision OCR plugin for MarkItDown — extracts text from images in PDF, DOCX, PPTX, and XLSX files with 3x speedup via ThreadPoolExecutor batching."
 readme = "README.md"
@@ -47,16 +47,16 @@ llm = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/echojfree/markitdown-ocr"
-Documentation = "https://github.com/echojfree/markitdown-ocr#readme"
-Issues = "https://github.com/echojfree/markitdown-ocr/issues"
-Source = "https://github.com/echojfree/markitdown-ocr"
+Homepage = "https://github.com/echojfree/markitdown-ocr-parallel"
+Documentation = "https://github.com/echojfree/markitdown-ocr-parallel#readme"
+Issues = "https://github.com/echojfree/markitdown-ocr-parallel/issues"
+Source = "https://github.com/echojfree/markitdown-ocr-parallel"
 
 [tool.hatch.version]
 path = "src/markitdown_ocr/__about__.py"
 
 [project.entry-points."markitdown.plugin"]
-ocr = "markitdown_ocr"
+ocr_parallel = "markitdown_ocr"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

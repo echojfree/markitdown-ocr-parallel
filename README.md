@@ -1,6 +1,6 @@
 # MarkItDown OCR Plugin
 
-[![PyPI](https://img.shields.io/pypi/v/markitdown-ocr.svg)](https://pypi.org/project/markitdown-ocr/)
+[![PyPI](https://img.shields.io/pypi/v/markitdown-ocr-parallel.svg)](https://pypi.org/project/markitdown-ocr-parallel/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 LLM Vision plugin for [MarkItDown](https://github.com/microsoft/markitdown) that extracts text from images embedded in PDF, DOCX, PPTX, and XLSX files.
@@ -14,7 +14,7 @@ LLM Vision plugin for [MarkItDown](https://github.com/microsoft/markitdown) that
 ## Installation
 
 ```bash
-pip install markitdown-ocr
+pip install markitdown-ocr-parallel
 ```
 
 The plugin uses whatever OpenAI-compatible client you already have:
@@ -143,7 +143,7 @@ Every extracted OCR block is wrapped as:
 ### Running Tests
 
 ```bash
-git clone https://github.com/echojfree/markitdown-ocr.git
+git clone https://github.com/echojfree/markitdown-ocr-parallel.git
 cd markitdown-ocr
 pip install -e ".[llm]"
 pytest tests/ -v
