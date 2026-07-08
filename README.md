@@ -158,6 +158,14 @@ python -m build
 
 ## Changelog
 
+### 0.2.3 — PPTX newline fix
+
+- **Fix**: PPTX converter emitted literal `\n` (backslash-n) instead of real
+  newlines, producing malformed markdown. Now aligned with the upstream core
+  PPTX converter — clean, readable output.
+- **Perf**: XLSX now reads all sheets in a single pass instead of re-parsing
+  the workbook once per sheet.
+
 ### 0.2.0 — Parallel Batch OCR
 
 - **Parallel OCR**: `extract_text_batch()` method using `ThreadPoolExecutor` for 2-3x speedup
